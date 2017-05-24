@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference Registration</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>
+        Fill in this form to register to Visual Studio
+        Smarts Conference
+    </h2>
+
+    <!--This is where to put form-->
+    <form action="FormProcessor.aspx" method="post">
+        
+        <fieldset>
+            <legend>Personal Data</legend>
+            <datalist id="salutationlist">
+
+                <option label="" value="">None</option>
+                <option label="Mr." value="mrval">Mr.</option>
+                <option label="Mrs." value="mrsval">Mrs.</option>
+                <option label="Ms." value="Ms.">Ms.</option>
+                <option label="Dr." value="Dr.">Dr.</option>
+            
+            </datalist>
+            
+            
+
+            <label for="salutation">Salutation</label>
+            <input id="salutation" type="text" 
+                   list="salutationlist" 
+                   name="salutation" autofocus />
+            <br />
+            <label for="fname">Frist Name:</label>
+            <input id="fname" type="text" list="fnamelist" name="fname" />
+            <br />
+            <label for="lname">Last Name:</label>
+            <input id="lname" type="text" list="lnamelist" name="lname" />
+            <br />
+
+        </fieldset>
+        <input type="hidden" name="caller" value="Registration.html" />
+        
+        <input type="submit" value="Register" />
+        
+    </form>
+</body>
+</html>
